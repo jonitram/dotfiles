@@ -1,0 +1,51 @@
+
+# command shortcuts
+alias q='exit'
+alias h='history'
+alias c='clear'
+alias cs='clear;ls'
+alias csa='clear;ls -la'
+alias lsa='ls -la'
+alias p='cat'
+alias o='open'
+alias t='time'
+alias k='kill'
+
+# locations
+alias null='/dev/null'
+
+# change directory shortcuts
+alias home='cd ~'
+alias root='cd /'
+alias dtop='cd ~/Desktop'
+alias docs='cd ~/Documents'
+alias down='cd ~/Downloads'
+alias code='cd ~/code'
+alias ..='cd ..'
+alias ...='cd ..; cd..'
+alias ....='cd ..; cd ..; cd ..'
+
+# python
+alias python='python3.7'
+alias pip='pip3'
+
+# git
+alias g='git'
+alias cl='git clone'
+alias st='git status'
+alias lg='git log'
+alias a='git add'
+alias al='git add .'
+alias cm='git commit -m'
+
+# shortcuts to editing dot files
+alias updal='sh ~/.update_aliases.sh'
+alias vimrc='vim ~/.vimrc'
+alias zshrc='vim ~/.zshrc'
+alias bashrc='vim ~/.bashrc'
+alias refreshz='source ~/.zshrc'
+alias refreshb='source ~/.bashrc'
+
+# ut commands
+alias lab='ssh jonitram@andromeda.cs.utexas.edu'
+alias 439d='docker run -v$(pwd):/work -ti x'

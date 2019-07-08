@@ -1,0 +1,3 @@
+add a repos file to source for, push-all / pull-all / clone-repos
+so they don't all need to be updated with the same list everytime
+

@@ -1,0 +1,47 @@
+syntax on
+colorscheme desert
+
+set tabstop=8 " number of spaces that tab looks like
+set shiftwidth=4 " the size of an indent
+set softtabstop=0 " non-zero means a mix of tabs and spaces 
+set autoindent " new  lines continue previous line's indents
+set smarttab " tabs are 'tabstop' number of spaces
+set expandtab " tabs are replaced by spaces
+set backspace=indent,eol,start " more powerful backspacing
+
+set linebreak " avoid wrapping a line in the middle of a word
+set wrap " wraps long lines going beyond the visible screen
+
+set number "show line numbers
+set relativenumber "show relative line numbers on other lines
+set cursorline " shows a horizontal line for where your cursor is
+set showmatch " highlight matching parenthesis, brackets, etc
+
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+set ignorecase " ignore case when searching
+set smartcase " switch to case-sensitive when search contains uppercase
+
+set wildmenu " visual autocomplete for commands
+set showcmd " shows the last command entered in the bottom right
+
+set lazyredraw " redraw only when necessary for faster macros
+
+" prevent vim from jumping over single lines that stretch across multiple
+:noremap j gj
+:noremap k gk
+
+" maps ; to : while allowing pressing ; twice for the original mapping
+map ; :
+noremap ;; ;
+
+" pressing jk really fast functions as an escape
+:imap jk <Esc>
+
+" any files that end in '.notes' will have spellcheck automatically turned on
+if has("autocmd")
+        augroup notesSpell
+        	autocmd!
+        	autocmd BufRead,BufNewFile *.notes setlocal spell spelllang=en_us
+        augroup END
+endif
