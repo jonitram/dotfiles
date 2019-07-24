@@ -4,7 +4,7 @@
 # list of casks installed via homebrew
 acore="google-chrome spotify vlc discord slack visual-studio-code iterm2"
 bcore="marshallofsound-google-play-music-player microsoft-office libreoffice jetbrains-toolbox amethyst docker"
-brews="python3 go"
+brews="python3 go java"
 
 # install programs based on device
 if [ "$(uname)" = "Darwin" ]; then
