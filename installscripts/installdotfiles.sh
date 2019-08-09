@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# create a safer git 'up' alias for use instead of git 'pull'
-read -p "Would you like to create a git 'up' alias as an alternative to git 'pull'? [y/n] " gitup
-if [ $gitup = 'y' ]; then
+# create git aliases
+read -p "Would you like to setup 'git' aliases? [y/n] " gitaliases
+if [ $gitaliases = 'y' ]; then
     echo "Creating git 'up' alias"
     git config --global alias.up '!git remote update -p; git merge --ff-only @{u}'
+    echo "done"
+    echo "Creating git 'alias' alias"
+    git config --global alias.alias "! git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\ =\ /"
     echo "done"
 fi
 
