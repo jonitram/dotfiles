@@ -38,6 +38,9 @@ noremap ;; ;
 " pressing jk really fast functions as an escape
 :imap jk <Esc>
 
+" clear highlighting from a search by searching again and backspacing
+nnoremap / :noh<return>/
+
 " any files that end in '.notes' will have spellcheck automatically turned on
 if has("autocmd")
         augroup notesSpell
